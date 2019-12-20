@@ -2,6 +2,7 @@
 ## Testing
 The code is tested for various types of rules like
 <br>
+
 |direction|protocol|port |ip_address       |
 |---------|--------|-----|-----------------|
 |inbound  |tcp     |1-65535|0.0.0.0-255.255.255.255  |
@@ -37,6 +38,7 @@ In order to reduce search space, which in turn will reduce time, I implemented n
  
 ## Further Improvements  
 Now the problem with my solution is we still need to loop (65535 x 4294967295 (MAX_IP_POSSIBLE)) times (worst case possible), if the csv of rules has that many individual entries(not range). That is, my algorithm will perform O(n) times where n is the total number of rules.  
+
 |direction|protocol|port |ip_address       |
 |---------|--------|-----|-----------------|
 |inbound  |tcp     |1    |0.0.0.1          |
